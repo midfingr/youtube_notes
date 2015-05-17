@@ -1,0 +1,39 @@
+Build Your Own Sound FX
+
+Requirements
+- libcanberra
+- vala
+
+Example Script:
+###################################################
+using Canberra;
+public class HelloWorld {
+	static void main () {
+	Context hello;
+	Context.create(out hello);
+	hello.play (0,
+		PROP_EVENT_ID, "phone-incoming-call",
+		PROP_EVENT_DESCRIPTION, "hello world");
+	Thread.usleep (2000000);
+	}
+}
+###################################################
+
+Command to build:
+valac --pkg libcanberra sounds.vala
+
+Sounds are referenced by:
+/usr/share/sounds/freedesktop/stereo/
+
+- add your own sounds:
+copy as admin to the directory
+/usr/share/sounds/freedesktop/stereo/
+
+- give a unique name
+- edit the script under:
+PROP_EVENT_ID, "phone-incoming-call"
+change to:
+PROP_EVENT_ID, "my_sound"
+
+- rename the output to whatever you wish
+
