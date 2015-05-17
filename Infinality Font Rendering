@@ -1,0 +1,38 @@
+add to pacman.conf:
+
+[infinality-bundle]
+Server = http://bohoomil.com/repo/$arch
+
+[infinality-bundle-multilib]
+Server = http://bohoomil.com/repo/multilib/$arch
+
+pacman-key -r 962DDE58
+pacman-key -f 962DDE58
+pacman-key --lsign 962DDE58
+
+sudo pacman -Syy
+
+pacman -Ss freetype2-infinality-ultimate
+
+Example install:
+sudo pacman -S freetype2-infinality-ultimate
+sudo pacman -S lib32-freetype2-infinality-ultimate
+
+reboot
+sudo pacman -S fontconfig-infinality-ultimate
+
+Languages
+
+cd /etc/fonts/conf.d
+sudo ln -s ../conf.avail.infinality/36-repl-missing-glyphs.conf . # Note the dot is included!
+
+Firefox/Chrome
+
+sudo fc-match "monospace"
+
+General
+
+sudo fc-cache -fr
+
+SOURCE: 
+https://wiki.archlinux.org/index.php/Infinality
