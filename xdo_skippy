@@ -1,0 +1,25 @@
+xfce gnome like behaviour
+xdotool
+- hotcorners
+
+skippy-xdf (from the AUR)
+- expo
+
+xfdashboard
+
+example scripts:
+
+#!/bin/bash
+xdotool behave_screen_edge top-left exec /usr/bin/xfdashboard &
+## gnome-shell like
+------------------------------
+#!/bin/bash
+xdotool behave_screen_edge top-right exec /usr/bin/skippy-xd --toggle-window-picker
+## expose effect
+------------------------------
+#!/bin/bash
+xdotool behave_screen_edge bottom-left exec xfce4-popup-whiskermenu &
+## whisker menu
+
+xfdashboard Ubuntu:
+https://launchpad.net/~xubuntu-dev/+archive/ubuntu/extras
