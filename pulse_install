@@ -1,4 +1,7 @@
-pulseaudio install
+Video:
+http://youtu.be/RXJUyhlIMvs
+
+PulseAudio Install Notes
 
 sudo pacman -S pulseaudio pulseaudio-alsa pavucontrol libcanberra-pulse lib32-libpulse lib32-libcanberra-pulse lib32-alsa-plugins
 
