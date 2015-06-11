@@ -1,0 +1,27 @@
+pulseaudio install
+
+sudo pacman -S pulseaudio pulseaudio-alsa pavucontrol libcanberra-pulse lib32-libpulse lib32-libcanberra-pulse lib32-alsa-plugins
+
+systemctl --user enable pulseaudio.socket
+
+pulseaudio --start
+pulseaudio --kill
+
+sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
+sh -c "pactl set-sink-mute 0 false ; pactl -- set-sink-volume 0 -5%"
+pactl set-sink-mute 0 toggle
+
+yaourt xfce4-volumed-pulse
+reboot after install
+
+alsa mic fix
+cat /proc/asound/modules
+
+sudo leafpad /etc/modprobe.d/modprobe.conf
+
+options snd-hda-intel model=ALC889 position_fix=3
+
+sudo leafpad /etc/pulse/default.pa
+load-module module-udev-detect tsched=0
+
+reboot
