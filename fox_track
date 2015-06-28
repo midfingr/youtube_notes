@@ -1,0 +1,9 @@
+#Firefox tracking protection
+type in the address bar
+about:config
+search the keyword
+tracking
+double click the key entry:
+privacy.trackingprotection.enabled
+
+Enjoy :)
