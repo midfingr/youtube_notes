@@ -1,0 +1,47 @@
+compiz-standalone 2015
+
+AUR files:
+
+yaourt -S compiz
+yaourt -S slingscold
+yaourt -S dockbarx
+
+pacman files:
+
+openbox
+python2-xdg
+xdotool
+leafpad
+pcmanfm
+xfce4-terminal
+gvfs
+faenza-icon-theme
+archlinux-wallpaper
+numix-themes
+
+
+Hide Window Decoration Maximize
+!state=maxvert
+
+##################################
+xprofile script
+
+#!/bin/sh
+
+# Make sure this is before the 'exec' command or it won't be sourced.
+[ -f /etc/xprofile ] && source /etc/xprofile
+[ -f ~/.xprofile ] && source ~/.xprofile
+
+add startup programs to .xprofile
+##################################
+add to /usr/share/xsessions:
+i.e. name compiz.desktop
+##################################
+[Desktop Entry]
+Version=1.0
+Name=Compiz
+Comment=Use this session to run Compiz as your desktop environment
+Exec=compiz
+Icon=
+Type=Application
+DesktopNames=Compiz
