@@ -1,0 +1,17 @@
+mkdir -p .config/openbox
+sudo pacman -S openbox
+cp /etc/xdg/openbox/* .config/openbox
+sudo pacman -S obconf lxappearance-obconf thunar thunar-volman thunar-archive-plugin gvfs xfce4-panel xfce4-terminal xfce4-whiskermenu-plugin leafpad file-roller gmrun tumbler gpicview nitrogen oblogout parcellite python2-xdg p7zip xorg-xprop xdg-user-dirs
+
+yaourt -S localepurge obkey-git compton-git gtk-theme-config
+
+cp /etc/xdg/compton.conf.example .config/compton.conf
+nano .config/compton.conf # remove shadow
+nano .config/openbox/autostart # add xfce4-panel compton
+cp /etc/X11/xinit/xinitrc .xinitrc
+nano .xinitrc # exec openbox-session
+
+wallpapers, themes, infinality font bundle, networkmanager
+
+sudo pacman -S mate-themes mate-themes-extras faenza-icon-theme
+yaourt -S wallpaper-archpaint2
