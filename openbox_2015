@@ -15,3 +15,39 @@ wallpapers, themes, infinality font bundle, networkmanager
 
 sudo pacman -S mate-themes mate-themes-extras faenza-icon-theme
 yaourt -S wallpaper-archpaint2
+
+## Openbox menu.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Change _Wallpaper">
+    <action name="Execute"><execute>nitrogen</execute></action>
+  </item>
+  <item label="Ch_ange Theme">
+    <action name="Execute"><execute>lxappearance</execute></action>
+  </item>
+  <item label="_Chromium">
+    <action name="Execute"><execute>chromium</execute></action>
+  </item>
+  <item label="_Run Command">
+    <action name="Execute"><execute>gmrun</execute></action>
+  </item>
+  <item label="_Terminal">
+    <action name="Execute"><execute>xfce4-terminal</execute></action>
+  </item>
+  <separator />
+  <separator label="System" />
+  <menu id="system-menu"/>
+  <separator />
+  <item label="Log Out">
+    <action name="Execute">
+      <command>oblogout</command>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
