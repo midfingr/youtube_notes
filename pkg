@@ -1,5 +1,7 @@
 PKGBUILD HOW TO
 
+Youtube Video: http://youtu.be/JLmDQezrNfE
+
 - make sure base-devel and gcc is installed
 - create a build folder; i.e. vnc2swf
 - cd vnc2swf
