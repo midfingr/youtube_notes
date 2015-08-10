@@ -1,0 +1,38 @@
+PKGBUILD HOW TO
+
+- make sure base-devel and gcc is installed
+- create a build folder; i.e. vnc2swf
+- cd vnc2swf
+- cp /usr/share/pacman/PKGBUILD.proto PKGBUILD
+- edit the PKGBUILD file
+NOTE: in this example, most commands in the prototype can be removed.
+
+EXAMPLE:
+
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=vnc2swf
+pkgver=0.5.0
+pkgrel=1
+pkgdesc="A cross-platform screen recording tool"
+arch=('any')
+url=""
+license=('GPL')
+source=("http://www.unixuser.org/~euske/vnc2swf/vnc2swf-0.5.0.tar.gz")
+md5sums=('2eed9cd91cff76e69004c905660b00ae')
+
+build() {
+	cd "$pkgname-$pkgver"
+	./configure --prefix=/usr
+	make
+  }
+
+package() {
+	cd "$pkgname-$pkgver"
+	make DESTDIR="${pkgdir}" install
+}
+############ END OF EXAMPLE ############
