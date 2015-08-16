@@ -1,5 +1,7 @@
 Arch maintenance
 
+Video: http://youtu.be/dOzoUMKIJIU
+
 - sudo pacman -S ncdu # ncdu /var/
 - rm -r .cache/* # on occasion rm -r .thumbnails/*
 - sudo nano /etc/systemd/journald.conf # SystemMaxUse=50M
