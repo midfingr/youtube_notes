@@ -11,6 +11,8 @@ Arch maintenance
 - systemctl --failed
 - fstrim / -v # SSD ONLY!
 
+chromium # create a file called chromium-flags.conf # add --disk-cache-dir=/tmp/cache # save and exit
+
 ##Pacman##
 - pacro
 - paco
