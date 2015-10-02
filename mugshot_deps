@@ -1,0 +1,16 @@
+Video: https://youtu.be/6ZV1ybXcqp0
+
+Mugshot avatar dependancies for Whisker Menu in Arch Linux:
+
+gstreamer0.10-good-plugins
+mate-accountsdialog
+lightdm
+lightdm-gtk-greeter
+
+others that may be required:
+
+pulseaudio
+pulseaudio-alsa
+
+run:
+sudo gtk-update-icon-cache /usr/share/icons/hicolor
