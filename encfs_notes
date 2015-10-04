@@ -1,0 +1,15 @@
+Encfs Notes
+Video: https://youtu.be/EjGmWdBk3Ik
+
+Install:
+sudo pacman -S encfs
+
+Basic Usage
+encfs ~/.folder ~/folder
+follow the prompts
+
+Unmount:
+fusermount -u ~/folder
+
+GUI Program: gnome-encfs-manager
+https://aur.archlinux.org/packages/gnome-encfs-manager
