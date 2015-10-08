@@ -1,0 +1,16 @@
+redshift
+
+sudo pacman -S redshift
+deps if needed:
+sudo pacman -S python-gobject python-xdg librsvg
+
+run redshift from start menu and/or terminal
+
+############################################
+The systemd way
+
+mkdir -p ~/.config/systemd/user
+cp /usr/lib/systemd/user/redshift-gtk.service ~/.config/systemd/user/
+systemctl --user enable redshift-gtk.service
+
+reboot
