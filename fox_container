@@ -1,0 +1,24 @@
+Firefox Container
+
+Youtube Video: https://youtu.be/PanBf9mvy5Q
+
+sudo pacman -S arch-install-scripts xorg-xhost
+
+(optional)
+xhost +localhost
+
+echo $DISPLAY
+export DISPLAY=:0
+
+mkdir container
+
+sudo pacstrap -i -c -d ~/container/ base firefox xorg
+
+Run Firefox:
+
+sudo systemd-nspawn --setenv=DISPLAY=:0 \
+              --setenv=XAUTHORITY=~/.Xauthority \
+              --bind-ro=$HOME/.Xauthority:/root/.Xauthority \
+              --bind=/tmp/.X11-unix \
+              -D ~/container \
+              firefox
