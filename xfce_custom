@@ -1,0 +1,19 @@
+Xfce4 Custom
+
+YouTube Video: https://youtu.be/JkSTa9ITISY
+
+sudo pacman -S faenza-icon-theme
+sudo pacman -S numix-themes
+sudo pacman -S xfce4-whiskermenu-plugin
+sudo pacman -S gvfs
+sudo pacman -S unrar zip unzip p7zip
+sudo pacman -S thunar-archive-plugin
+
+AUR Files:
+yaourt gtk-theme-config
+yaourt numix-circle-icon-theme-git
+xfce4-dockbarx-plugin-git
+
+AUR Archive: https://github.com/aur-archive
+engrampa-thunar
+xame
