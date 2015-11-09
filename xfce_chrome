@@ -1,0 +1,19 @@
+xfce4 ChromeOS
+
+YouTube Video: https://youtu.be/e-YaDw7HdYY
+
+Packages for Arch Linux
+
+yaourt google-chrome
+yaourt xfce-theme-greybird
+yaourt ultra-flat-icons
+
+install/add google apps
+google-chrome-stable --show-app-list
+icons  ~./.local/share/icons/hicolor/128x128/apps/
+
+chrome apps ~./.local/share/applications/
+copy to desktop
+
+font
+sudo pacman -S ttf-liberation
