@@ -1,3 +1,5 @@
+YouTube video: https://youtu.be/U1Fd6OHj518
+
 sudo pacman -S xfce4 lxsession networkmanager lightdm lightdm-gtk-greeter leafpad git
 yaourt budgie-desktop
 sudo systemctl enable lightdm
