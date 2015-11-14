@@ -1,0 +1,14 @@
+sudo pacman -S xfce4 lxsession networkmanager lightdm lightdm-gtk-greeter leafpad git
+yaourt budgie-desktop
+sudo systemctl enable lightdm
+sudo systemctl enable NetworkManager
+sudo pacman -S gnome-control-center gnome-backgrounds gnome-tweak-tool
+
+other:
+yaourt gtk-theme-arc
+yaourt ultra-flat-icos
+xame from the AUR archive
+git clone https://github.com/aur-archive/xame
+cd xame
+makepkg -s
+makepkg -i
