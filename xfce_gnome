@@ -1,0 +1,31 @@
+xfce_gnome
+Youtube Video: https://youtu.be/v2m-2V6RKoE
+
+sudo pacman -S volwheel gnome-control-center gvfs-goa gvfs-google gnome-contacts gnome-documents empathy telepathy
+
+## Save as org.gnome.Documents.desktop ## in ~/.local/share/applications ##
+[Desktop Entry]
+Name=Documents
+Comment=Access, manage and share documents
+Exec=gnome-documents
+Icon=gnome-documents
+Terminal=false
+Type=Application
+StartupNotify=true
+DBusActivatable=true
+#OnlyShowIn=GNOME;
+Categories=GTK;Office;
+Keywords=Docs;PDF;Document;
+
+##Save as online.desktop ## in ~/.local/share/applications ##
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Online Accounts
+Comment=Connect to online accounts
+Exec=gnome-control-center online-accounts
+Icon=goa-panel
+Terminal=false
+Type=Application
+Categories=GTK;Network;
+StartupNotify=false
