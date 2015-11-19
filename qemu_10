@@ -1,0 +1,11 @@
+Youtube Video: https://youtu.be/_DiCqr2y5As
+
+Windows?
+
+basic raw image:
+
+qemu-img create -f raw win 25G
+
+qemu-system-x86_64 -cdrom win.iso -m 4096 -enable-kvm -drive file=win,format=raw -cpu host -smp cores=6 -usbdevice tablet -vga std
+
+qemu-system-x86_64 -m 4096 -enable-kvm -drive file=win,format=raw -cpu host -smp cores=6 -vga std -usbdevice tablet -soundhw hda
