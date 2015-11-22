@@ -1,0 +1,12 @@
+Youtube Video: https://youtu.be/oW6aMeZEahA
+
+nomodeset before first boot i.e. add to grub and update
+
+dockbarx
+online accounts (google drive, docs, IM, etc.)
+typhoon weather app
+desktop search (tracker-needle)
+pulseaudio integration (need pavucontrol as well)
+xscreensaver with lock screen (xscreensaver-command -lock)
+xame (whisker menu editor)
+pamac-aur (updates, app management, AUR support)
