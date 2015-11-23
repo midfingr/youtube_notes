@@ -1,0 +1,27 @@
+
+YouTube Video: https://youtu.be/FzF_k3HMj0M
+
+Desktop Environments
+Xfce				yes
+MATE				yes
+GNOME				no
+Openbox			no
+Gnome Fallback		yes
+Cinnamon			no
+LXDE				yes
+
+Software
+compiz (AUR) 0.9 series
+dconf-editor
+fusion icon (AUR) optional 0.9 series
+emerald (AUR) optional 0.9 series
+emerald-themes (AUR) optional
+
+AUR Links
+https://aur.archlinux.org/packages/compiz
+https://aur.archlinux.org/packages/fusion-icon0.9/
+https://aur.archlinux.org/packages/emerald0.9/
+
+Transparent Menus
+
+Tooltip | Menu | PopupMenu | DropdownMenu
