@@ -1,0 +1,30 @@
+Plasma 5 Nov 23 2015
+YouTube Video: https://youtu.be/8QtBTZZGzzg
+
+pacman -S plasma
+pacman -S dolphin kwrite konsole breeze-kde4
+su
+sddm --example-config > /etc/sddm.conf
+nano /etc/sddm.conf
+
+[Theme]
+Current=breeze
+CursorTheme=breeze
+
+sudo systemctl enable sddm
+sudo systemctl enable NetworkManager
+
+reboot
+#####################################
+GTK Progam Themes:
+
+yaourt gnome-breeze-git
+pacman -S gtk-theme-orion
+
+#####################################
+Legacy Tray Icons:
+
+yaourt xembed-sni-proxy-git
+yaourt libappindicator-gtk2
+yaourt libappindicator-gtk3
+pacman -S sni-qt
