@@ -1,0 +1,33 @@
+Xfce4 Xmas Desktop
+
+YouTube Video: https://youtu.be/0nZENNP9HXU
+
+Packages Need:
+
+mplayer
+handbrake (or other transcoder)
+shantz-xwinwrap-bzr (AUR)
+xscreensaver
+
+Optional
+compton-git
+comptray
+compton-conf
+
+Christmas_Icons:
+https://drive.google.com/file/d/0BxhBaqtjMTGZSjdDbnBsanBSc3c/edit
+Xmas Movies:
+https://drive.google.com/file/d/0B1gwPhZ-BsWEeDZqUFlXMlVzS00/view?usp=sharing
+Scripts:
+https://drive.google.com/file/d/0B1gwPhZ-BsWEcHU5MVFkOXptaVU/view?usp=sharing
+
+Suggested Command Keys:
+
+CTRL+ALT+~ = compton on
+CTRL+ALT+z = compton off
+
+CTRL+ALT+, = multiple animated movies
+CTRL+ALT+m = single animated move
+CTRL+SHIFT+Q = wallpaper rotation
+
+CTRL+ALT+. = kill all animations
