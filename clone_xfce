@@ -1,5 +1,7 @@
 Quick Git HowTo
 
+YouTube Video: https://youtu.be/csrNEwI_GMM
+
 git config --global user.name "username"
 git config --global user.email "your_email"
 
