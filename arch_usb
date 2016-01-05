@@ -1,0 +1,32 @@
+Youtube Video: https://youtu.be/1nPesiEhuic
+
+Arch on USB
+sudo pacman -S arch-install-scripts
+
+run as su
+
+*make sure usb is NOT mounted
+wipefs -a /dev/sdf
+fdisk /dev/sdf
+
+disable journal
+mkfs.ext4 -O "^has_journal" /dev/sdf1
+
+mount and install arch as usual:
+mount /dev/sdf1 /mnt
+pacstrap /mnt base base-devel
+
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+passwd .. etc
+
+
+Persistent:
+e2label /dev/sdf1 arch64
+
+video
+xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-nouveau
+
+mkinitcpio -p linux
+grub-install --removable /dev/sdf
+
