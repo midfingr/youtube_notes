@@ -1,0 +1,36 @@
+Arch Linux Command Line Utils
+
+Youtube Video: https://youtu.be/rwGyjeY9MzU
+
+AUR:
+
+localepurge https://aur.archlinux.org/packages/localepurge/
+profile-cleaner https://aur.archlinux.org/packages/profile-cleaner/
+wego https://aur.archlinux.org/packages/wego-git
+bmenu https://aur.archlinux.org/packages/bmenu/
+libeatmydata https://aur.archlinux.org/packages/libeatmydata/
+
+pacman:
+mlocate (locate)
+bash-completion
+ncdu
+sl
+git
+bc
+
+procps (procps-ng)
+ref: https://gitlab.com/procps-ng/procps
+	top
+	w
+	pwd
+	sudo slabtop
+	free (free -m, free -g, free -h)
+	pkill
+
+pacman aliases:
+pacro
+pacc
+paco
+
+pacro command:
+alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
