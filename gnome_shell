@@ -1,0 +1,36 @@
+gnome custom 2016
+
+gnome-shell
+garcon
+xfce4-terminal
+leafpad
+gnome-backgrounds
+gnome-tweak-tool
+gnome-control-center
+mate-system-monitor
+thunar
+thunar-volman
+thunar-archive-plugin
+gvfs
+p7zip
+unrar
+firefox
+ristretto
+tumbler
+ffmpegthumbnailer
+
+sudo systemctl enable NetworkManager
+
+
+AUR:
+xame
+vibrantly-colors
+gnome-shell-extension-activities-config
+lxdm-gtk3
+
+sudo systemctl enable lxdm
+
+wallpaper script:
+
+#!/bin/bash
+gsettings set org.gnome.desktop.background picture-uri file://"$(find ~/Pictures/walls/ -type f | shuf -n1)"
