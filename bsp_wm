@@ -1,0 +1,53 @@
+Binary Space Partitioning Window Manager = bspwm
+
+Youtube Video: https://youtu.be/ZbXQUOwcH08
+
+bspwm install
+
+pacman packages:
+
+bspwm
+sxhkd
+terminus-font
+xorg-xset
+xorg-xsetroot
+dmenu
+termite (optional)
+rxvt-unicode (urxvt)
+trayer (optional)
+stalonetray (optional)
+
+
+AUR packages:
+xtitle-git
+sutils-git
+lemonbar-xft-git
+
+.xinitrc
+sxhkd &
+exec bspwm
+
+configuration:
+mkdir -p .config/bspwm
+mkdir .config/sxhkd
+cp /usr/share/doc/bspwn/examples/bspwmrc .config/bspwm
+cp /usr/share/doc/bspwn/examples/sxkhdrc .config/sxhkd
+NOTE: edit sxkhdrc if using termite
+
+add to .bashrc
+export PANEL_FIFO=/tmp/panel-fifo
+export PATH=$PATH:/home/midfingr/Documents/panel
+then: source ~/.bashrc
+
+cp -r /usr/share/doc/bspwn/examples/panel /home/midfingr/Documents
+add to .config/bspwm/bspwmrc
+panel &
+
+startx
+
+dmenu colors
+https://github.com/Cesura/dotfiles
+
+mouse cursor
+add to .xinitrc
+xsetroot -cursor_name left_ptr
