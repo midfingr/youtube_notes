@@ -1,0 +1,75 @@
+The Arch Way
+
+Youtube Video: https://youtu.be/ps4HL4pZj_o
+
+- burn iso file to disc or USB
+- boot from media
+- press enter desired entry (64 or 32)
+
+- wifi-menu (if wireless)
+- sync Arch mirrors:
+pacman -Syy
+pacman -S reflector
+reflector -c 'Country' -f 12 -l 12 -n 12 --verbose --save /etc/pacman.d/mirrorlist
+- fdisk -l (to find empty drive)
+- fdisk /dev/sdX (X is drive letter)
+
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
+mkswap /dev/sda3
+
+mount /dev/sda1 /mnt
+mkdir /mnt/home
+mount /dev/sda2 /mnt/home
+swapon /dev/sda3
+
+pacstrap /mnt base base-devel
+
+genfstab -U >> /mnt/etc/fstab
+cat /mnt/etc/fstab (to see if correct)
+
+arch-chroot /mnt
+passwd
+nano /etc/locale.gen
+locale-gen
+locale > /etc/locale.conf
+
+ls /usr/share/zoneinfo
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+date (check if correct)
+
+useradd -m -g users -G adm,lp,wheel,power,audio,video -s /bin/bash username
+passwd username
+
+EDITOR=nano visudo
+uncomment %wheel (choose one)
+
+echo vbox > /etc/hostname
+nano /etc/hosts (change to hostname)
+systemctl enable dhcpcd (if not wireless)
+
+pacman -S wpa_supplicant wireless_tools dialog
+pacman -S reflector rsync mlocate bash-completion
+pacman -S xf86-video-(ati nouveau intel)
+pacman -S virtualbox-guest-utils
+pacman -S xorg-xinit xorg-twm xterm
+pacman -S alsa-utils
+
+pacman -S xfce4
+
+mkinitcpio -p linux
+pacman -S grub os-prober
+grub-install /dev/sdX
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+umount /mnt -R
+reboot (or poweroff)
+
+log in as root
+pacman -Syu
+exit
+login as user
+type:
+startxfce4
+
