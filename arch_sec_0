@@ -1,0 +1,20 @@
+Options
+
+- dm-crypt lvm
+- linux-grsec # nvidia issues
+- firejail + firetools
+- ufw or iptables
+
+sysctl
+/etc/sysctl.d
+sudo sysctl --system
+
+add fstab rules for data drives:
+noexec,nosuid,nodev
+
+clipboard manager
+
+disable coredump logging:
+	/etc/systemd/coredump.conf
+	Storage=none
+	systemctl daemon-reload
