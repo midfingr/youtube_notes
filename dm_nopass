@@ -1,0 +1,10 @@
+as root:
+
+dd bs=512 count=4 if=/dev/urandom of=/crypto_keyfile.bin
+chmod 000 /crypto_keyfile.bin
+chmod 600 /boot/initramfs-linux* # include the *
+cryptsetup luksAddKey /dev/sdX# /crypto_keyfile.bin
+
+add to mkinitcpio:
+FILES="/crypto_keyfile.bin"
+regenerate initramfs
