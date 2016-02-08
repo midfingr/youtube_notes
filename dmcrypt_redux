@@ -1,0 +1,25 @@
+fdisk /dev/sdx
+root parition set to 8e (Linux LVM)
+
+cryptsetup luksFormat -c aes-xts-plain64 -s 512 /dev/sda2 <---- watch this (cpu related)
+cryptsetup luksFormat /dev/sda2 <---- safest bet
+cryptsetup open --type luks /dev/sda2 lvm
+
+pvcreate /dev/mapper/lvm
+vgcreate root /dev/mapper/lvm
+lvcreate -l +100%FREE root -n root
+
+mkfs.ext4 /dev/mapper/root-root
+mount /dev/mapper/root-root /mnt
+
+mkfs.ext4 /dev/sda1
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+
+pacstrap /mnt base base-devel
+genfstab /mnt >> /mnt/etc/fstab (easier without UUID)
+arch-chroot /mnt
+add: encrypt lvm2 to /etc/mkinitcpio.conf (hooks)
+
+edit grub add:
+GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:root root=/dev/mapper/root-root"
