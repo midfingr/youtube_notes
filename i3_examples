@@ -1,0 +1,11 @@
+exec --no-startup-id your_program --disable-wm-check
+
+# bar toggle, hide or show 
+bindsym $mod+m bar mode toggle
+
+font pango:DejaVu Sans Mono, Icons 8
+
+logout for oblogout
+pkill -KILL -u $USER
+
+bindsym ctrl+space exec xfce4-popup-whiskermenu
