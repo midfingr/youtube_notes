@@ -1,4 +1,5 @@
 # Install Nvidia Proprietary Arch Linux
+# YouTube Video: https://youtu.be/jZ2bQRJAg_w
 
 sudo pacman -S nvidia nvidia-libgl
 if asked to remove mesa-libgl, answer yes (y)
