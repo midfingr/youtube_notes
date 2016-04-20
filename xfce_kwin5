@@ -1,0 +1,23 @@
+XFCE4 + KWIN
+
+Youtube Video: https://youtu.be/jY_FwQBII3M
+
+sudo pacman -S kwin systemsettings
+
+in a terminal type:
+kwin_x11 --replace &
+
+to resort back:
+xfwm4 --replace &
+
+if working, in a terminal:
+
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa kwin_x11
+
+reboot
+
+theme:
+freeze
+
+cursor:
+Breeze_Blue AUR: breeze-blue-cursor-theme
