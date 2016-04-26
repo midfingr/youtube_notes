@@ -1,0 +1,30 @@
+Youtube Video: https://youtu.be/G7BhN0Av2k8
+
+Pre-Install
+choose option 2: start non-free
+(should help with Nvidia proprietary)
+
+missing keys ...
+sudo pacman -S manjaro-keyring
+
+Mugshot
+../pixmaps/faces would help
+
+sudo wheel
+
+su
+gpasswd -a username wheel
+EDITOR=nano visudo
+
+Uncomment:
+ %wheel ALL=(ALL) NOPASSWD: ALL
+
+Add at the bottom
+Defaults:your_username       !authenticate
+
+Exit su
+
+Nvidia Command Line
+
+mhwd -l -d
+sudo mhwd -i pci [name of driver]
