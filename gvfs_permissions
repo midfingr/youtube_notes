@@ -1,0 +1,24 @@
+su
+leafpad /usr/share/polkit-1/rules.d/10-drives.rules
+##########
+polkit.addRule(function(action, subject) {
+if (action.id.indexOf("org.freedesktop.udisks2.") == 0){ 
+       return polkit.Result.YES;
+   }
+}
+);
+##########
+
+##########
+EDIT
+leafpad /etc/polkit-1/rules.d/10-disable-suspend.rules
+##########
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.login1.suspend" ||
+        action.id == "org.freedesktop.login1.suspend-multiple-sessions" ||
+        action.id == "org.freedesktop.login1.hibernate" ||
+        action.id == "org.freedesktop.login1.hibernate-multiple-sessions") {
+        return polkit.Result.NO;
+    }
+});
+### 10-disable-suspend.rules can be used in 99-manjaro.rules by over writing.
