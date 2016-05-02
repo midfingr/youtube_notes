@@ -1,0 +1,32 @@
+Arch to Manjaro
+
+Youtube Video: https://youtu.be/1H_BMQpWSBs
+
+Refer to:
+https://github.com/manjaro
+
+Packages to install
+
+AUR:
+
+firefox-gtk2
+engrampa-thunar
+vertex-themes
+menulibre
+menda-icon-themes-git
+pamac-aur
+grub2-theme-starfield-manjaro-menda
+
+pacman:
+
+xfce4
+xfce4-goodies
+pulseaudo
+pulseaudo-alsa
+xdg-user-dirs
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+gstreamer0.10-good-plugins
+accountsservice
+volumeicon
