@@ -1,0 +1,31 @@
+Zoom the screen with Alt+Scroll in KDE
+
+YouTube Video:
+https://youtu.be/0ZBzM0e7KL8
+
+sudo pacman -S xbindkeys
+touch ~/.xbindkeysrc
+EDIT:
+leafpad ~/.xbindkeysrc
+
+ADD:
+
+"qdbus org.kde.kglobalaccel /component/kwin invokeShortcut view_zoom_in"
+    alt + b:4
+"qdbus org.kde.kglobalaccel /component/kwin invokeShortcut view_zoom_out"
+    alt + b:5
+
+or
+
+"dbus-send --type=method_call --dest=org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut string:view_zoom_in"
+    alt + b:4
+"dbus-send --type=method_call --dest=org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut string:view_zoom_out"
+    alt + b:5
+
+killall xbindkeys
+xbindkeys
+
+Add xbindkeys to startup.
+
+REF:
+https://blaxpirit.com/blog/19/zoom-the-screen-with-alt-scroll-in-kde.html
