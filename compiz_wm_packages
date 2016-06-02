@@ -1,0 +1,43 @@
+compiz_wm_packages
+
+pacman packages
+
+xfce4-terminal
+leafpad
+thunar
+thunar-archive-plugin
+thunar-volman
+file-roller
+gvfs
+gksu
+polkit-gnome
+gnome-keyring
+xfce4-panel
+xfce4-notifyd
+xfce4-power-manager
+xfce4-whiskermenu-plugin
+
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+
+networkmanager
+networkmanager-dispatcher-ntpd
+network-manager-applet
+
+dconf-editor
+xdg-user-dirs
+numix-themes
+lxappearance
+numlockx
+volumeicon
+gmrun
+oblogout
+
+
+AUR packages
+compiz (0.9 series)
+numix-icon-theme-git # install this first
+numix-circle-icon-theme-git
+menulibre
+
