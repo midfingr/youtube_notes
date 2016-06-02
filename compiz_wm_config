@@ -1,0 +1,11 @@
+touch ~/.xprofile
+sudo mkdir /usr/share/xsessions
+sudo leafpad /usr/share/xsessions/compiz.desktop
+
+#############################
+[Desktop Entry]
+Type=Application
+Name=Compiz
+Comment=Start Compiz Window Manager
+Exec=compiz
+#############################
