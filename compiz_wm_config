@@ -1,3 +1,5 @@
+YouTube Video: https://youtu.be/ZQ32As1veD4
+
 touch ~/.xprofile
 sudo mkdir /usr/share/xsessions
 sudo leafpad /usr/share/xsessions/compiz.desktop
