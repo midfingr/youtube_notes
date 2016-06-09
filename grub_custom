@@ -1,0 +1,24 @@
+#GRUB in Arch Linux Custom
+
+YouTube Video: https://www.youtube.com/watch?v=4QaQqnsIP18
+
+Custom Menu Entries
+/etc/grub.d/40_custom
+
+Find Windows (mount the partition) BIOS/MBR
+sudo grub-probe --target=fs_uuid /run/media/midfingr/3648CA5548CA1411/bootmgr
+OR
+sudo grub-probe --target=fs_uuid '/run/media/midfingr/Win10 x64/'
+
+/etc/default/grub
+
+Custom Font
+sudo grub-mkfont --output=/boot/grub/DejaVuSansMono.pf2 --size=24 /usr/share/fonts/TTF/DejaVuSansMono.ttf
+
+GRUB_FONT="/boot/grub/DejaVuSansMono.pf2"
+GRUB_COLOR
+
+Wallpaper
+/boot/grub
+for jpg non-indexed, 8-bit
+resolution must match grub
