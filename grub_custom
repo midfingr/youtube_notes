@@ -22,3 +22,62 @@ Wallpaper
 /boot/grub
 for jpg non-indexed, 8-bit
 resolution must match grub
+
+## Example Theme (theme.txt)
+
+title-text: ""
+title-font: "Sans Regular 12"
+title-color: "#000000"
+message-font: "Fixed Regular 13"
+message-color: "#FFFFFF"
+message-bg-color: "#f6f6f6"
+desktop-color: "#000000"
+desktop-image: "splash4.png"
+terminal-font: "Fixed Regular 13"
+
++ boot_menu {
+		left = 30%
+		width = 40%
+		top = 150
+		height = 50%
+		item_font = "Sans Regular 12"
+		selected_item_font = "Sans Regular 14"
+		item_color = "#ffffff"
+		selected_item_color = "#ffff00"
+		menu_color = "#ff0000"
+		item_height = 38
+		item_padding = 15
+		item_spacing = 5
+		selected_item_pixmap_style= "select_bkg_*.png"
+		scrollbar = true
+		scrollbar_width = 24
+
+}
+
++ progress_bar {
+	id = "__timeout__"
+	left = 15%
+	top = 80%
+	height = 20
+	width = 70%
+	font = "DejaVu Sans Regular 12"
+	text_color = "#000"
+	fg_color = "#fff"
+	bg_color = "#6ac"
+	border_color = "#fff"
+	text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
+
+# Show an informational message.
++ hbox {
+		top = 100%-35
+		left = 20%
+		+ label {text = "Enter: " font = "Sans 12" color = "#000000" align = "left"}
+		+ label {text = "Boot Selection     " font = "Sans 12" color = "#ffff00" align = "left"}
+		+ label {text = "E: " font = "Sans 12" color = "#000000" align = "left"}
+		+ label {text = "Edit Selection     " font = "Sans 12" color = "#ffff00" align = "left"}
+		+ label {text = "C: " font = "Sans 12" color = "#000000" align = "left"}
+		+ label {text = "GRUB Commandline" font = "Sans 12" color = "#ffff00" align = "left"}
+}
+
