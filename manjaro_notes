@@ -28,3 +28,7 @@ Nvidia Command Line
 
 mhwd -l -d
 sudo mhwd -i pci [name of driver]
+
+Manjaro mirror list via terminal example
+
+sudo pacman-mirrors -g -m rank -b stable -c United_States -t 10
