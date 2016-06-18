@@ -1,0 +1,28 @@
+Web App Launcher (Arch Linux)
+
+YouTube Video: https://youtu.be/kd5QKaF1XFg
+
+Packages from the AUR
+ice-ssb
+yad
+menulibre (optional)
+
+yad script (example) # REPLACE WITH YOUR USER_NAME !! # Give it a name such as web_launcher.sh
+###########################
+#!/bin/bash
+
+# Web App Launcher
+
+yad --icons --read-dir="/home/midfingr/.local/share/applications/Web_Apps" --width=400 --height=350 --sort-by-name --single-click \
+--window-icon=preferences-desktop --image=rss --image-on-top --center \
+--title="Web Apps" --text='<span font_weight="bold">Web App Launcher</span>\nGoogle Chrome.' --button=gtk-close
+###########################
+
+- create a folder called Web_Apps in ~/.local/share/applications
+- place the above script anywhere inside your user home (i.e. scripts, etc.)
+- make the script executable
+- open Ice, add web sites, choose icon
+- copy the Ice .desktop from ~/.local/share/applications sites to the Web_Apps folder
+- edit each .desktop as desired
+- archive and delete the Ice .desktop icons or use menulibre to remove duplicates
+- create a new launcher; desktop, panel, etc ...
