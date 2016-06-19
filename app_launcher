@@ -2,6 +2,28 @@ Web App Launcher (Arch Linux)
 
 YouTube Video: https://youtu.be/kd5QKaF1XFg
 
+# amendment
+ice-ssb seems to have stopped working
+you can achieve the same results with ice
+# example for manual .desktop entries
+##########################################################
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Drive
+Icon=/home/midfingr/.local/share/ice/drive.ico
+Exec=google-chrome-stable --app=https://drive.google.com
+NoDisplay=true
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+Terminal=false
+Comment=Google Drive
+##########################################################
+
+# original post
+
 Packages from the AUR
 ice-ssb
 yad # needs base-devel packages
