@@ -4,7 +4,7 @@ YouTube Video: https://youtu.be/kd5QKaF1XFg
 
 Packages from the AUR
 ice-ssb
-yad
+yad # needs base-devel packages
 menulibre (optional)
 
 yad script (example) # REPLACE WITH YOUR USER_NAME !! # Give it a name such as web_launcher.sh
