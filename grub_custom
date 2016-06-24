@@ -10,6 +10,19 @@ sudo grub-probe --target=fs_uuid /run/media/midfingr/3648CA5548CA1411/bootmgr
 OR
 sudo grub-probe --target=fs_uuid '/run/media/midfingr/Win10 x64/'
 
+# Other
+menuentry "System shutdown" {
+	echo "System shutting down..."
+	halt
+}
+
+menuentry "System restart" {
+	echo "System rebooting..."
+	reboot
+}
+
+##################################
+
 /etc/default/grub
 
 Custom Font
